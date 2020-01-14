@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">868096881629-t8giiafc0a49t6fo42rofe7isip9vks2.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://hellochat-2271d.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">868096881629</string>
+    <string name="google_api_key" translatable="false">AIzaSyDDPoy8lkivoALzQEUC9Z2qqGPWVj8xyss</string>
+    <string name="google_app_id" translatable="false">1:868096881629:android:9d1f4ea040277187c2fc34</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDDPoy8lkivoALzQEUC9Z2qqGPWVj8xyss</string>
+    <string name="google_storage_bucket" translatable="false">hellochat-2271d.appspot.com</string>
+    <string name="project_id" translatable="false">hellochat-2271d</string>
+</resources>

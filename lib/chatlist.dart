@@ -4,6 +4,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:hellochat/optionschat/addnewfriend.dart';
 import 'package:hellochat/services/authentication.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:collection/collection.dart';
@@ -84,7 +85,7 @@ class _ChatListState extends State<ChatList> {
                 title: Text(listdata[index].username),
                 leading: CircleAvatar(
                   radius: 30.0,
-                  backgroundImage: NetworkImage(listdata[index].useravatar),
+                  backgroundImage: NetworkImage((listdata[index].useravatar) != null ? listdata[index].useravatar : ''),
                 ),
                 onTap: () {
                   choiceperson(listdata[index].useremail,
@@ -183,13 +184,52 @@ class _ChatListState extends State<ChatList> {
             child: IconButton(
               icon: Icon(Icons.add),
               onPressed: (){
-                print('helloo');
+                _showDialogOptions();
               },
             ),
           )
-        ],),
+        ],
+        automaticallyImplyLeading: false,),
         body: listviewuser());
   }
+_showDialogOptions(){
+  return showDialog(
+    context: context,
+    builder: (context){
+      return Container(
+        child: AlertDialog(
+          content: Container(
+            child: Column(
+              children: <Widget>[              
+                _optionsContent('this is group', Icons.group_add,Colors.green,'グループ作成'),
+                _optionsContent(AddNewFriend(), Icons.person_add,Colors.orange,'友達追加'),
+                _optionsContent('this is scan QR', Icons.scatter_plot,Colors.grey,'QRスキャン'),
+                _optionsContent('this is calendar', Icons.calendar_today,Colors.redAccent,'マイカレンダ'),
+                _optionsContent('this is file transfer', Icons.insert_drive_file,Colors.blue,'File Transfer'),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+  );
+}
+_optionsContent(direct,iconcus,colorcus,namecus){
+  return GestureDetector(
+                  onTap:(){
+                    Navigator.push(
+                       context,
+                       MaterialPageRoute(builder: (context) => direct),
+                    );      
+                  },
+                  child: Row(
+                    children: <Widget>[
+                      Icon(iconcus,color: colorcus,),
+                      Text(namecus)
+                    ],
+                  ),             
+                );
+}
 }
 
 class UserList {

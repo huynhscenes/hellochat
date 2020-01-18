@@ -1,16 +1,12 @@
-# hellochat
+<h1 align="center">FIREBASE + FLUTTERにHELLOチャットのアプリ</h1>
+<p align="center">
+<img align="center" src="https://i.imgur.com/3D61i4k.png"/>
+ </p
 
-A new Flutter project.
+<span align="center">LINEアプリとZALOアプリの機能をミックスして、HELLOアプリを開発しています。</span>
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<h3>機能を開発予定：</h3>
+①プライベートチャットとグールプチャット</br>
+②ストーリーズ</br>
+③タイムライン</br>
+④GPSで友達探す</br>
